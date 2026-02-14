@@ -6,6 +6,7 @@ import Vara from "vara";
 import style from "./page.module.css"
 import helloKitty from "../public/hello-kitty.png";
 import beijocas from "../public/beijocas.gif";
+import anaElvia from "../public/ana-elvia.jpeg";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function Home() {
@@ -195,9 +196,14 @@ export default function Home() {
           alt='imagem fofinha'
         />
         <div id="Aceitou!">
-          <h1 className={style.aceitouText}>I love you my dirty Mexican!
-          </h1>
-
+          <h1 className={style.aceitouText}>I love you my dirty Mexican!</h1>
+          <Image
+            src={anaElvia}
+            height={480}
+            quality={100}
+            priority={true}
+            alt='imagem fofinha'
+          />
         </div>
       </div>
       <Toaster position='bottom-center' />
