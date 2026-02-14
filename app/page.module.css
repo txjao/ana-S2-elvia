@@ -40,6 +40,7 @@
   transition: width 0.2s ease-in;
   font-weight: 400;
 }
+
 .link:hover::after {
   width: 100%;
 }
@@ -52,7 +53,7 @@
 
 .wrapper {
   height: 40%;
-  background-color: #fff090;
+  background-color: var(--background);
   z-index: 1000;
 }
 

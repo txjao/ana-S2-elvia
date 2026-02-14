@@ -4,9 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Vara from "vara";
 import style from "./page.module.css"
-import smile from "../public/smile.svg";
-import sad from "../public/sad.svg";
-import v from "../public/v.png";
+import helloKitty from "../public/hello-kitty.png";
 import beijocas from "../public/beijocas.gif";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -18,7 +16,7 @@ export default function Home() {
   const [isAbleToAnimate, setIsAbleToAnimate] = useState(false)
   const aceitouRef = useRef<HTMLDivElement>(null);
 
-  const text = { text: "Sabrina, namora comigo?" };
+  const text = { text: "Will you be my valentine?" };
 
   // Animation Durations (in milliseconds)
   const varaAnimationDuration = 6000; // Increased Vara animation time
@@ -163,12 +161,13 @@ export default function Home() {
     <>
       <div className={style.container}>
         <Image
-          src={v}
+          src={helloKitty}
           alt=""
           height={144}
           className={style.mainImg}
           style={{
             bottom: `${imagePosition}px`,
+            zIndex: `-1px`
           }}
         />
         <div className={style.wrapper}>
@@ -176,15 +175,11 @@ export default function Home() {
 
           <div className={style.btnBox} style={{ opacity: opacity }}>
             <a className={style.btn} href="#Aceitou!" onClick={handleSmoothScroll}>
-              <span className={style.btnText}>Sim!</span>
-              <Image src={smile} alt="Smile" width={16} />
+              <span className={style.btnText}>Yes</span>
             </a>
 
-            <a className={style.btn} onClick={() => {
-              setTimesDenied(prev => prev + 1)
-            }}>
-              <span className={style.btnText}>Não!</span>
-              <Image src={sad} alt="Sad" width={16} />
+            <a className={style.btn} href="#Aceitou!" onClick={handleSmoothScroll}>
+              <span className={style.btnText}>Yes</span>
             </a>
           </div>
         </div>
@@ -200,8 +195,7 @@ export default function Home() {
           alt='imagem fofinha'
         />
         <div id="Aceitou!">
-          <h1 className={style.aceitouText}>Te amo!<br />
-            Prometo lhe fazer feliz!
+          <h1 className={style.aceitouText}>I love you my dirty Mexican!
           </h1>
 
         </div>
